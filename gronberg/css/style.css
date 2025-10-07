@@ -1,0 +1,15 @@
+:root {
+  --text-default: #101010;
+  --text-primary: #db574d;
+  --text-muted: rgba(16, 16, 16, 0.6);
+  --text-inverse: #ffffff;
+}
+
+body {
+  font-family: 'ClashDisplay', sans-serif;
+  color: var(--text-default);
+}
+
+.wrapper {
+  min-height: 100%;
+}

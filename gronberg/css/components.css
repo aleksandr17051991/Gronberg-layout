@@ -1,0 +1,75 @@
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+}
+
+/* Button */
+
+.button {
+  padding: 16px 20px;
+  line-height: 1.2;
+  font-size: 18px;
+  color: var(--text-primary);
+  border: 1px solid var(--text-primary);
+  border-radius: 100px;
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+.button path {
+  stroke: var(--text-primary);
+  transition: stroke 0.3s;
+}
+
+.button:hover {
+  color: var(--text-inverse);
+  background-color: var(--text-primary);
+}
+
+.button:hover path {
+  stroke: var(--text-inverse);
+}
+
+/* Arrow link */
+
+.arrow-link {
+  font-size: 18px;
+  line-height: 1.2;
+  display: inline-flex;
+  align-items: center;
+  gap: 12px;
+  transition: color 0.3s;
+}
+
+.arrow-link path {
+  stroke: var(--text-default);
+  transition: stroke 0.3s;
+}
+
+.arrow-link:hover path {
+  stroke: var(--text-primary);
+}
+
+.arrow-link:hover {
+  color: var(--text-primary);
+}
+
+/* Arrow link LEFT */
+
+.arrow-link--left {
+  flex-direction: row-reverse;
+}
+
+.arrow-link--left svg {
+  rotate: 180deg;
+}
+
+/* Section header (h2) */
+
+.block-header {
+}
