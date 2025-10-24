@@ -46,3 +46,8 @@ h6 {
   color: inherit;
   font-weight: inherit;
 }
+
+button {
+  background-color: transparent;
+  cursor: pointer;
+}
