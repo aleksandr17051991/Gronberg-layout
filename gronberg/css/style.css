@@ -151,7 +151,7 @@ body {
 
 .menu__body::before {
   content: '';
-  height: 110px;
+  height: 90px;
   width: 100%;
   position: fixed;
   top: 0;
@@ -224,7 +224,7 @@ body {
   }
 
   .menu__body::before {
-    height: 83px;
+    height: 80px;
   }
 
   .menu__list {
@@ -246,7 +246,7 @@ body {
   }
 
   .menu__body::before {
-    height: 53px;
+    height: 50px;
   }
 
   .menu__list {
