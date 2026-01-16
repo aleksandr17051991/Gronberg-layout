@@ -274,9 +274,6 @@ body.lock {
 
 /* HERO SECTION */
 
-.page__hero {
-}
-
 .hero {
   padding-top: 24px;
 }
@@ -331,15 +328,9 @@ body.lock {
   margin-left: 29%;
 }
 
-.hero__author {
-}
-
 .author {
   display: flex;
   align-items: flex-end;
-}
-
-.author__picture {
 }
 
 .author__image {
@@ -407,9 +398,6 @@ body.lock {
 
 .hero__image {
   width: 100%;
-}
-
-.hero__scroll {
 }
 
 .scroll-hero {
