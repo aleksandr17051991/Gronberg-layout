@@ -278,6 +278,10 @@ body.lock {
   padding-top: 24px;
 }
 
+.hero:not(:last-child) {
+  margin-bottom: 160px;
+}
+
 .hero__container {
   display: flex;
 }
@@ -550,9 +554,6 @@ body.lock {
 }
 
 @media (max-width: 430px) {
-  .hero__header:not(:last-child) {
-  }
-
   .hero__title {
     font-size: 60px;
   }
@@ -609,4 +610,4 @@ body.lock {
   }
 }
 
-/*  */
+/* SERVICES BLOCK */
