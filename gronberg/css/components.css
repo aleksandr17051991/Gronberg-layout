@@ -87,6 +87,7 @@
 }
 
 .block-header__title span {
+  text-transform: none;
   color: var(--text-primary);
 }
 
