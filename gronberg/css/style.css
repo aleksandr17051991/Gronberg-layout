@@ -617,6 +617,7 @@ body.lock {
 }
 
 .services__container {
+  position: relative;
   max-width: 1230px;
   display: flex;
   align-items: flex-start;
@@ -624,14 +625,12 @@ body.lock {
 }
 
 .services__title {
-  /* 1200(container)-800(serv.list)-20(gap)=380px */
-  flex: 1 1 380px;
+  position: sticky;
+  top: 140px;
   display: flex;
   align-items: center;
   gap: 10px;
   line-height: 1.6;
-  /* 144(left padding title) / 1230 (container) = 11.707317 */
-  padding-left: 11.707317%;
 }
 
 .services__title::before {
@@ -643,14 +642,11 @@ body.lock {
 
 .services__list {
   counter-reset: item;
-  flex: 1 1 800px;
 }
 
 .services__item {
   position: relative;
-  border-bottom: 1px solid var(--border-default);
-  padding-left: 111px;
-  padding-bottom: 50px;
+  padding-left: 13.875%; /* 111/800 */
 }
 
 .services__item::before {
@@ -666,6 +662,8 @@ body.lock {
 
 .services__item:not(:last-child) {
   margin-bottom: 50px;
+  border-bottom: 1px solid var(--border-default);
+  padding-bottom: 50px;
 }
 
 .services__name {
@@ -688,6 +686,85 @@ body.lock {
   line-height: 1.6;
 }
 
-.services__description:not(:last-child) {
+.services__description p:not(:last-child) {
   margin-bottom: 10px;
+}
+
+/* SERVICES ADAPTIVE  */
+@media (max-width: 1430px) {
+  .services {
+    padding-top: 120px;
+    padding-bottom: 120px;
+  }
+}
+
+@media (max-width: 991.98px) {
+  .services {
+    padding-top: 80px;
+    padding-bottom: 80px;
+  }
+
+  .services__title {
+    top: 110px;
+  }
+
+  .services__item:not(:last-child) {
+    margin-bottom: 30px;
+    padding-bottom: 30px;
+  }
+
+  .services__name:not(:last-child) {
+    margin-bottom: 15px;
+  }
+}
+
+@media (max-width: 767.98px) {
+  .services {
+    padding-top: 30px;
+    padding-bottom: 30px;
+  }
+
+  .services__container {
+    flex-direction: column;
+  }
+
+  .services__title {
+    top: 60px;
+  }
+
+  .services__item::before {
+    font-size: 24px;
+  }
+
+  .services__item:not(:last-child) {
+    margin-bottom: 20px;
+    padding-bottom: 20px;
+  }
+
+  .services__name {
+    font-size: 24px;
+  }
+
+  .services__name:not(:last-child) {
+    margin-bottom: 10px;
+  }
+}
+
+/* mobile first */
+@media (min-width: 768px) {
+  /* 1200(container)-800(serv.list)-20(gap)=380px */
+  .services__title {
+    flex: 1 1 380px;
+  }
+
+  .services__list {
+    flex: 1 1 800px;
+  }
+}
+
+@media (min-width: 992px) {
+  .services__title {
+    /* 144(left padding title) / 1230 (container) = 11.707317 */
+    padding-left: 11.707317%;
+  }
 }
