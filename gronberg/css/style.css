@@ -650,10 +650,6 @@ body.lock {
 }
 
 /* SERVICES BLOCK */
-
-.services {
-}
-
 .services__container {
   position: relative;
   max-width: 1230px;
@@ -791,12 +787,6 @@ body.lock {
 }
 
 /* LATEST WORK section */
-.latest-work {
-}
-
-.latest-work__container {
-}
-
 .latest-work__block-header:not(:last-child) {
   margin-bottom: 128px;
 }
@@ -813,27 +803,12 @@ body.lock {
   row-gap: 128px;
 }
 
-.latest-work__column:first-child {
-  flex: 1 1 700px;
-}
-
 .latest-work__column:first-child .item-work:nth-child(2n) {
   align-self: center;
 }
 
-.latest-work__column:last-child {
-  /* 1400-190-700 = 510px */
-  flex: 1 1 510px;
-}
-
 .latest-work__column:last-child .item-work:nth-child(2n-1) {
   align-self: flex-end;
-}
-
-.latest-work__item {
-}
-
-.item-work {
 }
 
 .item-work__link {
@@ -870,4 +845,80 @@ body.lock {
 .item-work__caption {
   padding-top: 12px;
   line-height: 1.6;
+}
+
+/* ADAPTIVE latest work */
+
+@media (max-width: 1430px) {
+  .latest-work__block-header:not(:last-child) {
+    margin-bottom: 80px;
+  }
+
+  .latest-work__column {
+    row-gap: 80px;
+  }
+}
+
+@media (max-width: 981.98px) {
+  .latest-work__block-header:not(:last-child) {
+    margin-bottom: 50px;
+  }
+
+  .latest-work__column {
+    row-gap: 50px;
+  }
+
+  .item-work__title {
+    font-size: 26px;
+  }
+}
+
+@media (max-width: 767.98px) {
+  .latest-work__block-header:not(:last-child) {
+    margin-bottom: 20px;
+  }
+
+  .latest-work__column {
+    row-gap: 20px;
+  }
+
+  .item-work__title {
+    font-size: 20px;
+  }
+}
+
+@media (max-width: 599.98px) {
+  .latest-work__items {
+    overflow: auto;
+    /* delete right padding in block */
+    margin-inline: -15px;
+    padding-inline: 15px;
+  }
+
+  .latest-work__column {
+    flex-direction: row;
+    align-items: flex-start;
+    column-gap: 30px;
+  }
+
+  .item-work {
+    flex: 0 0 250px;
+  }
+
+  .item-work__title {
+    /* height for images alignment */
+    min-height: 46px;
+  }
+}
+
+/* mobile first */
+@media (min-width: 600px) {
+  .latest-work__column:first-child {
+    flex: 1 1 700px;
+  }
+
+  .latest-work__column:last-child {
+    /* 1400-190-700 = 510px */
+    flex: 1 1 510px;
+  }
 }
