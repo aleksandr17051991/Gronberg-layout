@@ -19,7 +19,9 @@
   display: inline-flex;
   align-items: center;
   gap: 10px;
-  transition: background-color 0.3s, color 0.3s;
+  transition:
+    background-color 0.3s,
+    color 0.3s;
 }
 
 .button path {
@@ -58,6 +60,25 @@
 
 .arrow-link:hover {
   color: var(--text-primary);
+}
+
+/* red arrow settings*/
+.arrow-link--red {
+  color: var(--text-primary);
+  transition: color 0.3s;
+}
+
+.arrow-link--red path {
+  stroke: var(--text-primary);
+  transition: stroke 0.3s;
+}
+
+.arrow-link--red:hover {
+  color: var(--text-default);
+}
+
+.arrow-link--red:hover path {
+  stroke: var(--text-default);
 }
 
 /* Arrow link LEFT */
