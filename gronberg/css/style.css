@@ -964,12 +964,12 @@ body.lock {
 }
 
 .item-exhibition__body {
-  display: flex;
   align-items: center;
+  gap: 48px;
 }
 
 /* start indents for all body elems. */
-.item-exhibition__body > * {
+.item-exhibition__content > * {
   margin-bottom: 8px;
 }
 
@@ -1021,13 +1021,12 @@ body.lock {
 }
 
 /* end of indents for body elems. */
-.item-exhibition__body > *:last-child {
+.item-exhibition__content > *:last-child {
   margin-bottom: 0px;
 }
 
 .item-exhibition__buy {
   flex-shrink: 0;
-  margin-inline: 3.636364%; /* 52/1430 */
 }
 
 .item-exhibitions__date {
@@ -1050,6 +1049,11 @@ body.lock {
     margin-bottom: 80px;
   }
 
+  .exhibitions__item:not(:last-child) {
+    padding-bottom: 40px;
+    margin-bottom: 40px;
+  }
+
   .item-exhibition__picture {
     width: 180px;
   }
@@ -1067,22 +1071,107 @@ body.lock {
   }
 }
 
-@media (max-width: 981.98px) {
+@media (max-width: 991.98px) {
   .exhibitions__block-header:not(:last-child) {
     margin-bottom: 50px;
   }
 
   .exhibitions__item {
     gap: 30px;
+    /* align-items: flex-start; */
+  }
+
+  .exhibitions__item:not(:last-child) {
+    padding-bottom: 30px;
+    margin-bottom: 30px;
   }
 
   .item-exhibition__picture {
     width: 150px;
+  }
+
+  .item-exhibition__buy {
+    margin-top: 8px;
+  }
+
+  .item-exhibitions__date {
+    font-size: 60px;
+  }
+
+  .item-exhibitions__date small {
+    font-size: 20px;
   }
 }
 
 @media (max-width: 767.98px) {
   .exhibitions__block-header:not(:last-child) {
     margin-bottom: 30px;
+  }
+
+  .exhibitions__item {
+    gap: 20px;
+  }
+
+  .item-exhibition__picture {
+    width: 120px;
+  }
+
+  .item-exhibition__place {
+    gap: 6px;
+  }
+
+  .item-exhibition__place span {
+    gap: 6px;
+    font-size: 14px;
+  }
+
+  .item-exhibition__place span:not(:last-child)::after {
+    width: 10px;
+  }
+
+  .item-exhibition__title {
+    font-size: 24px;
+    margin-bottom: 10px;
+  }
+
+  .item-exhibitions__date {
+    font-size: 40px;
+  }
+
+  .item-exhibitions__date small {
+    font-size: 14px;
+  }
+}
+
+@media (max-width: 550px) {
+  .exhibitions__item {
+    flex-wrap: wrap;
+    position: relative;
+  }
+
+  .item-exhibition__picture {
+    flex-grow: 1;
+  }
+
+  .item-exhibitions__date {
+    background-color: var(--text-inverse);
+    border-radius: 5px;
+    padding: 10px;
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    font-size: 30px;
+  }
+}
+
+/* mobile first */
+
+@media (min-width: 992px) {
+  .item-exhibition__body {
+    display: flex;
+  }
+
+  .item-exhibition__buy {
+    margin-inline: 5.098039%; /* 52(margin) / 1020 (block body size)*/
   }
 }
