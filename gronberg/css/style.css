@@ -1180,3 +1180,137 @@ body.lock {
     margin-inline: 5.098039%; /* 52(margin) / 1020 (block body size)*/
   }
 }
+
+/* REVIEWS section */
+.reviews {
+}
+
+.reviews__container {
+  display: flex;
+  gap: 50px;
+}
+
+.reviews__content {
+  flex: 1 1 650px;
+}
+
+/* start indents for block */
+.reviews__content > * {
+  margin-bottom: 16px;
+}
+
+.reviews__title {
+  font-size: 70px;
+  line-height: 1.2;
+  text-transform: uppercase;
+}
+
+.reviews__title span {
+  color: var(--text-primary);
+  text-transform: none;
+}
+
+.reviews__sub-title {
+  font-size: 30px;
+  line-height: 1.2;
+  text-transform: uppercase;
+  margin-bottom: 48px;
+}
+
+.reviews__sub-title span {
+  color: var(--text-primary);
+}
+
+.reviews__button {
+}
+
+/* end indents for block */
+.reviews__content > *:last-child {
+  margin-bottom: 0px;
+}
+
+.reviews__items {
+  flex: 1 1 700px;
+}
+
+.item-reviews {
+  display: flex;
+  gap: 50px;
+  align-items: flex-start;
+}
+
+.item-reviews__picture {
+  aspect-ratio: 1;
+  width: 120px;
+  flex-shrink: 0;
+}
+
+.item-reviews__avatar {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.item-reviews__body {
+}
+
+/* start indents for block */
+.item-reviews__body > * {
+  margin-bottom: 24px;
+}
+
+.item-reviews__title {
+  font-size: 30px;
+  line-height: 1.2;
+  padding-left: 81px;
+  min-height: 51px;
+  background: url(../assets/images/icons/brackets.svg) left no-repeat;
+}
+
+.item-reviews__text {
+  margin-bottom: 40px;
+}
+
+.item-reviews__text p {
+  line-height: 1.6;
+}
+
+.item-reviews__text p:not(:last-child) {
+  margin-bottom: 15px;
+}
+
+.item-reviews__author {
+  font-size: 14px;
+  line-height: 1.6;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.item-reviews__author span {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.item-reviews__author span:not(:last-child)::after {
+  content: '';
+  background-color: var(--text-default);
+  width: 15px;
+  height: 1px;
+}
+
+/* end indents for block */
+.item-reviews__body > *:last-child {
+  margin-bottom: 0px;
+}
+
+/* Reviews ADAPTIVE */
+@media (max-width: 1430px) {
+}
+
+@media (max-width: 991.98px) {
+}
+
+@media (max-width: 767.98px) {
+}
