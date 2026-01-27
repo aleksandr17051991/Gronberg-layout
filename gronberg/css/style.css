@@ -1231,6 +1231,14 @@ body.lock {
 
 .reviews__items {
   flex: 1 1 700px;
+  display: flex;
+  flex-direction: column;
+}
+
+.reviews__item:not(:last-child) {
+  border-bottom: 1px solid var(--border-default);
+  margin-bottom: 96px;
+  padding-bottom: 96px;
 }
 
 .item-reviews {
