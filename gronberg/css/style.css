@@ -277,12 +277,16 @@ body.lock {
 
 /* MAIN  */
 /* page common settings */
-.page > * {
+.page > *:not([class*='--nomargin']) {
   margin-bottom: 224px;
 }
 
 .page__hero {
   margin-bottom: 160px;
+}
+
+.page__reviews {
+  margin-bottom: 0px;
 }
 
 .page > *:last-child {
