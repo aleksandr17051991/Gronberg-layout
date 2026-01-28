@@ -1182,15 +1182,16 @@ body.lock {
 }
 
 /* REVIEWS section */
-.reviews {
-}
-
 .reviews__container {
   display: flex;
+  align-items: flex-start;
   gap: 50px;
+  position: relative;
 }
 
 .reviews__content {
+  position: sticky;
+  top: 110px;
   flex: 1 1 650px;
 }
 
@@ -1219,9 +1220,6 @@ body.lock {
 
 .reviews__sub-title span {
   color: var(--text-primary);
-}
-
-.reviews__button {
 }
 
 /* end indents for block */
@@ -1259,9 +1257,6 @@ body.lock {
   object-fit: cover;
 }
 
-.item-reviews__body {
-}
-
 /* start indents for block */
 .item-reviews__body > * {
   margin-bottom: 24px;
@@ -1291,8 +1286,9 @@ body.lock {
   font-size: 14px;
   line-height: 1.6;
   display: flex;
+  flex-wrap: wrap;
   align-items: center;
-  gap: 10px;
+  gap: 0 10px;
 }
 
 .item-reviews__author span {
@@ -1315,10 +1311,100 @@ body.lock {
 
 /* Reviews ADAPTIVE */
 @media (max-width: 1430px) {
+  .reviews__content {
+    flex: 1 1 500px;
+  }
+
+  .reviews__items {
+    flex: 1 1 800px;
+  }
+
+  .reviews__item:not(:last-child) {
+    margin-bottom: 55px;
+    padding-bottom: 55px;
+  }
+
+  .reviews__title {
+    font-size: 56px;
+  }
+
+  .reviews__sub-title {
+    font-size: 22px;
+  }
+
+  .item-reviews__title {
+    font-size: 22px;
+  }
 }
 
 @media (max-width: 991.98px) {
+  .reviews__container {
+    flex-direction: column;
+  }
+
+  .reviews__content {
+    position: static;
+  }
+
+  .reviews__content,
+  .reviews__items {
+    flex: 1 1 auto;
+  }
+
+  .reviews__item:not(:last-child) {
+    margin-bottom: 30px;
+    padding-bottom: 30px;
+  }
+
+  .reviews__sub-title {
+    margin-bottom: 25px;
+  }
+
+  .reviews__title br,
+  .reviews__sub-title br {
+    display: none;
+  }
+
+  .item-reviews__body > * {
+    margin-bottom: 16px;
+  }
+
+  .item-reviews__text {
+    margin-bottom: 20px;
+  }
 }
 
-@media (max-width: 767.98px) {
+@media (max-width: 676.98px) {
+  .reviews__title br {
+    display: initial;
+  }
+}
+
+@media (max-width: 479.98px) {
+  .reviews__title {
+    font-size: 42px;
+  }
+
+  .item-reviews {
+    gap: 20px;
+  }
+
+  .reviews__sub-title {
+    font-size: 18px;
+  }
+
+  .item-reviews__title {
+    font-size: 18px;
+    padding-left: 35px;
+    min-height: 20px;
+    background: url(../assets/images/icons/brackets.svg) 0 0 / 20px no-repeat;
+  }
+
+  .reviews__button {
+    width: 100%;
+  }
+
+  .item-reviews__picture {
+    width: 70px;
+  }
 }
